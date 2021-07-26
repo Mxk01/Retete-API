@@ -3,34 +3,11 @@ const API_ID = 'dbb0dbd7';
 const APP_KEY = '9cb979253a427e87662aae47c2e07ae3';
 const section = document.querySelector('section');
 
-//  window.addEventListener('DOMContentLoaded',()=>{
-//      utterSomething();
-//  })
-
-// function utterSomething () 
-// {
-// let msg = new SpeechSynthesisUtterance("Welcome to foodie! We hope you enjoy this app");
-// var voices = speechSynthesis.getVoices();
-// msg.voice = voices[3];
-// msg.volume = 1; // 0 to 1
-// msg.rate = 2; // 0.1 to 10
-// msg.pitch = 1; //0 to 2
-// msg.voiceURI = 'native';
-// msg.lang = 'en-En';
-// speechSynthesis.speak(msg);
-// }
 
 function showRecipe(data){
 console.log(data);
 let hits = data.hits;
 let recipe = hits.map(meal=>{
-
-
-// ${meal.recipe.ingredients.length}
-//     ${meal.recipe.ingredients[1].text}
-//   ${meal.recipe.ingredients[2].text}
- //  ${meal.recipe.ingredients[3].text}
-  // ${meal.recipe.ingredients[4].text}
 
 console.log(meal);
 
@@ -119,5 +96,6 @@ recognition.start();
 
 
 
+document.querySelector('.start').addEventListener('click',()=> recognition.start() )
 
-recognition.start();
+// recognition.start();
